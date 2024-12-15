@@ -24,7 +24,7 @@
                     "image" => \Static\Kernel::getPath("/Public/Images/Articles/" . \Static\Kernel::getHash("Article", \Static\Kernel::getID(\Static\Kernel::getValue($article, "id"))) . ".jpeg"),
                     "title" => \Static\Kernel::getValue($article, "title"),
                     "overview" => \Static\Kernel::getValue($article, "overview"),
-                    "link" => \Static\Kernel::getPath("/projets/" . \Static\Kernel::getValue($article, "link")),
+                    "link" => \Static\Kernel::getPath("/projects/" . \Static\Kernel::getValue($article, "link")),
                 ));
             }
 

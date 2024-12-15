@@ -7,7 +7,7 @@
         public static function start($parameters) {
             $news = array();
 
-            foreach(range(1, ceil(\Static\Models\Articles::count() / 5)) as $page) {
+            foreach(range(1, ceil(\Static\Models\Articles::count() / 10)) as $page) {
                 $news["Page " . $page] = "/news/" . $page;
 
                 foreach(\Static\Models\Articles::getArticles($page) as $article) $news["Page " . $page . " - Array"][htmlspecialchars_decode(\Static\Kernel::getValue($article, "title"))] = \Static\Kernel::getValue($article, "link");

@@ -6,7 +6,7 @@
 
         private static $settings = array(
             "name" => "Pythony",
-            "version" => "2.0.0",
+            "version" => "2.0.1",
             "static" => "2.3.1",
 
             "link" => "https://www.pythony.dev",
