@@ -11,19 +11,20 @@
 
             if($page <= 0) return array();
 
-            $query = parent::$pdo->prepare("SELECT id, title, overview, link FROM " . parent::getPrefix() . "Articles WHERE NOW() >= published AND language = :language ORDER BY id DESC LIMIT :page, 5");
+            $query = parent::$pdo->prepare("SELECT id, YEAR(published) AS published, title, overview, link FROM " . parent::getPrefix() . "Articles WHERE NOW() >= published AND language = :language ORDER BY id DESC LIMIT :page, 10");
             $query->bindValue(":language", \Static\Languages\Translate::getLanguage(), PDO::PARAM_STR);
-            $query->bindValue(":page", $page * 5 - 5, PDO::PARAM_INT);
+            $query->bindValue(":page", $page * 10 - 10, PDO::PARAM_INT);
             $query->execute();
 
             $results = array();
 
             while($article = $query->fetch()) {
                 array_push($results, array(
+                    "published" => \Static\Kernel::getValue($article, "published"),
                     "image" => \Static\Kernel::getPath("/Public/Images/Articles/" . \Static\Kernel::getHash("Article", \Static\Kernel::getID(\Static\Kernel::getValue($article, "id"))) . ".jpeg"),
                     "title" => \Static\Kernel::getValue($article, "title"),
                     "overview" => \Static\Kernel::getValue($article, "overview"),
-                    "link" => \Static\Kernel::getValue($article, "link"),
+                    "link" => \Static\Kernel::getPath("/projets/" . \Static\Kernel::getValue($article, "link")),
                 ));
             }
 

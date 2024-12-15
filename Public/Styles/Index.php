@@ -9,7 +9,7 @@
     ?>
 
     .container {
-        background-image : linear-gradient(#<?= $colors[0]; ?>7F, #<?= $colors[0]; ?>7F), url("<?= \Static\Kernel::getPath("/Public/Images/Index/Background.jpeg"); ?>");
+        background-image : url("<?= \Static\Kernel::getPath("/Public/Images/Index/Background.jpeg"); ?>");
     }
 
     .navbar {

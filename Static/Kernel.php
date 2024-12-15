@@ -247,18 +247,7 @@
 
         public static function getThemes() {
             return array(
-                "maraschino" => array("FF2600", "941100", "FF7E79"),
-                "tangerine" => array("FF9300", "945200", "FFD479"),
-                "lemon" => array("FFFB00", "929000", "FFFC79"),
-                "lime" => array("8EFA00", "4F8F00", "D4FB79"),
-                "spring" => array("00F900", "008F00", "73FA79"),
-                "foam" => array("00FA92", "009051", "73FCD6"),
-                "turquoise" => array("00FDFF", "009193", "73FDFF"),
-                "aqua" => array("0096FF", "005493", "76D6FF"),
-                "blueberry" => array("0433FF", "011993", "7A81FF"),
-                "grape" => array("9437FF", "531B93", "D783FF"),
-                "magenta" => array("FF40FF", "942193", "FF85FF"),
-                "strawberry" => array("FF2F92", "941751", "FF8AD8"),
+                "aqua" => array("A9A9A9", "919191", "D6D6D6"),
             );
         }
 

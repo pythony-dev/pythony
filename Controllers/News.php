@@ -6,7 +6,7 @@
 
         public static function start($parameters) {
             $parameters["page"] = array_key_exists("page", $parameters) ? (int)$parameters["page"] : 1;
-            $parameters["limit"] = ceil(\Static\Models\Articles::count() / 5);
+            $parameters["limit"] = ceil(\Static\Models\Articles::count() / 10);
 
             if($parameters["page"] > $parameters["limit"] || $parameters["page"] < 1) {
                 header("Location: " . \Static\Kernel::getPath("/news"));

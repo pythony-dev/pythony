@@ -20,7 +20,7 @@
                         <div class="col-6 col-md-4 offset-3 offset-md-0 my-auto p-5">
                             <div class="bg-light shadow border rounded-circle">
                                 <a id="footer-icon" href="<?= \Static\Kernel::getPath("/"); ?>">
-                                    <img class="img-fluid" src="<?= \Static\Kernel::getPath("/Public/Images/Index/Icon.png"); ?>" alt="<?= \Static\Settings::getSettings("name"); ?>"/>
+                                    <img class="img-fluid p-4" src="<?= \Static\Kernel::getPath("/Public/Images/Index/Icon.png"); ?>" alt="<?= \Static\Settings::getSettings("name"); ?>"/>
                                 </a>
                             </div>
                         </div>
@@ -31,13 +31,6 @@
                                 <a id="footer-terms" class="text-decoration-none link-light" href="<?= \Static\Kernel::getPath("/terms"); ?>"> <?= \Static\Languages\Translate::getText("footer-terms"); ?> </a>
                                 <a id="footer-privacy" class="text-decoration-none link-light" href="<?= \Static\Kernel::getPath("/privacy"); ?>"> <?= \Static\Languages\Translate::getText("footer-privacy"); ?> </a>
                                 <a id="footer-siteMap" class="text-decoration-none link-light" href="<?= \Static\Kernel::getPath("/site-map"); ?>"> <?= \Static\Languages\Translate::getText("footer-siteMap"); ?> </a>
-                            </div>
-                            <div class="d-flex justify-content-between pt-4">
-                                <?php foreach(\Static\Kernel::getNetworks() as $network) { ?>
-                                    <a href="<?= \Static\Settings::getSettings(strtolower($network)); ?>" target="_blank">
-                                        <img class="img-fluid shadow border border-dark rounded-circle networks" src="<?= \Static\Kernel::getPath("/Public/Images/Networks/" . $network . ".png"); ?>" alt="<?= $network; ?>"/>
-                                    </a>
-                                <?php } ?>
                             </div>
                         </div>
                     </div>

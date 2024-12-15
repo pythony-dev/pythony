@@ -1,6 +1,6 @@
 const settings = {
     "name" : "Static",
-    "link" : "https://www.pythony.dev/Static",
+    "link" : "https://www.pythony.dev",
 }
 
 self.addEventListener("install", event => {

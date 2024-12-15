@@ -23,16 +23,12 @@
 
             if($parameters["userID"] <= 0) $parameters["links"] = array(
                 $parameters["getText"]("title-home") => "/",
-                $parameters["getText"]("title-features") => "/features",
                 $parameters["getText"]("title-news") => "/news",
                 $parameters["getText"]("title-news") . " - Array" => $news,
-                $parameters["getText"]("title-forums") => "/forums",
-                $parameters["getText"]("title-forums") . " - Array" => $forums,
                 $parameters["getText"]("title-contact") => "/contact",
                 $parameters["getText"]("title-terms") => "/terms",
                 $parameters["getText"]("title-privacy") => "/privacy",
                 $parameters["getText"]("title-siteMap") => "/site-map",
-                $parameters["getText"]("title-welcome") => "/welcome",
             );
             else {
                 $chats = array();

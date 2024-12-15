@@ -9,18 +9,18 @@
             "version" => "2.0.0",
             "static" => "2.3.1",
 
-            "link" => "https://www.pythony.dev/Static",
+            "link" => "https://www.pythony.dev",
             "email" => "hello@pythony.dev",
             "debug" => false,
 
             "salt" => "0123456789ABCDEF",
             "tests" => "FEDCBA9876543210",
 
-            "host" => "Static",
-            "database" => "Static",
+            "host" => "Pythony",
+            "database" => "Pythony",
             "username" => "Pythony",
             "password" => "Pythony123#",
-            "prefix" => "Static",
+            "prefix" => "Pythony",
 
             "facebook" => "https://www.facebook.com",
             "instagram" => "https://www.instagram.com",
